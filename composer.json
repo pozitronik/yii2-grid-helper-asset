@@ -1,0 +1,35 @@
+{
+	"name": "pozitronik/yii2-grid-helper-asset",
+	"description": "js hacks for yii2 grids",
+	"minimum-stability": "dev",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Pavel Dubrovsky",
+			"email": "antikillerxxl@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"yiisoft/yii2": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"pozitronik\\grid_helper_asset\\": "src"
+		}
+	},
+	"config": {
+		"process-timeout": 1800,
+		"fxp-asset": {
+			"enabled": false
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	]
+}
