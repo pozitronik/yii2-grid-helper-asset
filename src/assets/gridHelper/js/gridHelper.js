@@ -28,7 +28,7 @@ function setFakeGridFilter(tableId, filterName, filterValue, apply) {
 				multiple: true,
 				name: filterName + '[]'
 			}).appendTo(filterRow);
-			$(filterValue).each(function(index) {
+			$(filterValue).each(function (index) {
 				let option = $('<option/>');
 				option.attr({
 					value: filterValue[index],
@@ -47,6 +47,15 @@ function setFakeGridFilter(tableId, filterName, filterValue, apply) {
 
 	}
 	if (apply) $(tableId).yiiGridView("applyFilter");
+}
+
+/**
+ * Сбросить фильтры и перезагрузить таблицу
+ * @param {string} tableId
+ */
+function clearGridFilter(tableId) {
+	$(tableId + '-filters').find('input, select').val('');
+	$(tableId).yiiGridView("applyFilter");
 }
 
 function getSelect2SelectedBitmask(Select2) {
